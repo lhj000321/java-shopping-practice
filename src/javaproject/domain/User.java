@@ -14,4 +14,10 @@ public class User {
     }
     public String getId(){return id;}
     public String getName(){return name;}
+
+    //유효성 검증 메서드 추가
+    public boolean isValid(){
+        return id != null && !id.trim().isEmpty() &&
+               password != null && password.length() >= 6;
+    }
 }
